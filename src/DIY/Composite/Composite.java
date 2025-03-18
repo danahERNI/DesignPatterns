@@ -81,7 +81,7 @@ class Folder implements Component{
 
     @Override
     public void list(String indent) {
-        System.out.println(indent + " " + folderName);
+        System.out.println(indent + "[DIR] " + folderName);
         for (var component : components){
             component.list(indent + "  ");
         }
@@ -135,7 +135,7 @@ class File implements Component{
     
     @Override
     public void list(String indent) {
-        System.out.println(indent + "- " + fileName);
+        System.out.println(indent + "- [FILE] " + fileName);
     }
     @Override
     public String toString() {
